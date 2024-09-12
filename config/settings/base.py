@@ -42,13 +42,23 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',  # Token blacklist app
     'register',
     'login',
+    'main',
 ]
 
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#         'rest_framework_simplejwt.authentication.JWTAuthentication',
+#     ),
+# }
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',  # 기본적으로 인증된 사용자만 접근 가능
+    )
 }
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

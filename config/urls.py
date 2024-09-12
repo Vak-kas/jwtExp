@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/register/', include('register.urls')),  # Include the register app's URLs
     path('api/login/', include('login.urls')),        # Include the login app's URLs
+    path('main/', include('main.urls')),
 ]

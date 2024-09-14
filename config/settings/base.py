@@ -166,3 +166,26 @@ SIMPLE_JWT = {
 }
 
 AUTH_USER_MODEL = 'register.User'
+
+
+# CORS 허용 설정 (프론트엔드의 도메인을 여기에 추가합니다)
+CORS_ALLOWED_ORIGINS = [
+    'http://43.200.243.130:3000'
+    'http://43.200.243.130:3001',  # 프론트엔드 서버의 퍼블릭 IP
+]
+
+# 모든 도메인을 허용하려면 아래 설정을 사용 (테스트 용도로만 권장)
+CORS_ALLOW_ALL_ORIGINS = True
+
+# 요청 메서드 허용 (필요시)
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+    'PUT',
+    'PATCH',
+    'DELETE',
+    'OPTIONS',
+]
+
+# 인증 관련 요청에서 쿠키, 헤더 등을 허용
+CORS_ALLOW_CREDENTIALS = True

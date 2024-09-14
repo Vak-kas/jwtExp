@@ -1,10 +1,8 @@
 from .base import *
 from decouple import config
-import ast
 import os
 
-ALLOWED_HOSTS = ast.literal_eval(os.getenv("ALLOWED_HOSTS", "[]"))
-
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
 
 DATABASES = {
     'default': {

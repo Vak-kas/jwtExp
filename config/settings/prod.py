@@ -1,8 +1,7 @@
 from .base import *
 from decouple import config
-import os
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
+ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
 
 DATABASES = {
     'default': {

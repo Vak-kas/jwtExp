@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'register',
     'login',
     'main',
+    'django_prometheus',
+    'corsheaders'
 ]
 
 # REST_FRAMEWORK = {
@@ -68,6 +70,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_prometheus.middleware.PrometheusBeforeMiddleware',
+    'django_prometheus.middleware.PrometheusAfterMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'

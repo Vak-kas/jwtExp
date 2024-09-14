@@ -28,4 +28,6 @@ urlpatterns = [
 
 
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+
+    path('', include('django_prometheus.urls')),  # Prometheus 메트릭 엔드포인트 추가
 ]

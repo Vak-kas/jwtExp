@@ -1,0 +1,9 @@
+#prometheus.yml
+
+global:
+  scrape_interval: 15s  # 메트릭 수집 주기
+
+scrape_configs:
+  - job_name: 'django'
+    static_configs:
+      - targets: ['localhost:8000']  # Django 서버가 실행 중인 주소와 포트

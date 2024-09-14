@@ -170,7 +170,7 @@ AUTH_USER_MODEL = 'register.User'
 
 # CORS 허용 설정 (프론트엔드의 도메인을 여기에 추가합니다)
 CORS_ALLOWED_ORIGINS = [
-    'http://43.200.243.130:3000'
+    'http://43.200.243.130:3000',
     'http://43.200.243.130:3001',  # 프론트엔드 서버의 퍼블릭 IP
 ]
 

@@ -54,9 +54,9 @@ class MetricsConsumer(AsyncWebsocketConsumer):
                                     "metric": result["metric"],
                                     "value": result["values"][-1]  # 가장 최신 값만 포함
                                 })
-                        metrics['prometheus'][key] = latest_metrics
+                        metrics['node_exporter'][key] = latest_metrics
                     else:
-                        metrics['prometheus'][key] = []
+                        metrics['node_exporter'][key] = []
 
                 # Prometheus에서 필요한 메트릭 정의
                 prometheus_queries = {

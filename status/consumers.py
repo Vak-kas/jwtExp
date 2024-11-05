@@ -62,7 +62,7 @@ class MetricsConsumer(AsyncWebsocketConsumer):
                 prometheus_queries = {
                     'django_http_requests_total_by_method_total': 'django_http_requests_total_by_method_total',
                     'django_http_requests_latency_seconds_by_view_method_sum': 'django_http_requests_latency_seconds_by_view_method_sum',
-                    'django_http_responses_total_by_status_total': 'django_http_responses_total_by_status_total',
+                    # 'django_http_responses_total_by_status_total': 'django_http_responses_total_by_status_total',
                     'django_http_requests_body_total_bytes_sum': 'django_http_requests_body_total_bytes_sum',
                     'django_http_responses_body_total_bytes_sum': 'django_http_responses_body_total_bytes_sum'
                 }
